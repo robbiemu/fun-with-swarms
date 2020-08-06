@@ -1,0 +1,37 @@
+{
+  "name": "fun-with-swarms",
+  "version": "1.0.0",
+  "description": "fun-with-swarms",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server",
+    "build": "webpack --mode production",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/robbiemu/fun-with-swarms.git"
+  },
+  "keywords": [],
+  "author": "Robert Collins <robert.collins@qwire.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/robbiemu/fun-with-swarms/issues"
+  },
+  "homepage": "https://github.com/robbiemu/fun-with-swarms#readme",
+  "dependencies": {
+    "p5": "^1.1.9",
+    "webpack": "^4.44.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.10.5",
+    "@babel/core": "^7.11.1",
+    "@babel/preset-env": "^7.11.0",
+    "babel-loader": "^8.1.0",
+    "css-loader": "^4.2.1",
+    "jest": "^26.2.2",
+    "style-loader": "^1.2.1",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0"
+  }
+}
