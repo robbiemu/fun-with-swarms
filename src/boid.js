@@ -7,7 +7,7 @@ export class Boid extends Particle {
     this.perception = 160
     this.maxForce = 1
     this.maxSpeed = 4
-    this.minSpeed = 0.5
+    this.minSpeed = 1
     this.neighbors = []
   }
 
@@ -20,6 +20,7 @@ export class Boid extends Particle {
       1 / (this.neighbors.length || 1),
       1 / (this.neighbors.length || 1)
     )
+    this.acceleration.limit(0.025 * this.maxForce)
 
     this.position.add(this.velocity)
     this.velocity.add(this.acceleration).limit(this.maxSpeed)
@@ -84,7 +85,7 @@ export class Boid extends Particle {
         boid.position.x,
         boid.position.y
       )
-      avg.add(p5.Vector.sub(this.position, boid.position).div(d ** 2))
+      avg.add(p5.Vector.sub(this.position, boid.position).div(d ** 2 - d))
     })
 
     if (this.neighbors.length) {
@@ -93,6 +94,6 @@ export class Boid extends Particle {
     return avg
       .setMag(this.maxSpeed)
       .sub(this.velocity)
-      .limit(this.maxForce * 1.1)
+      .limit(this.maxForce)
   }
 }
