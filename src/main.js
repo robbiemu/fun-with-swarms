@@ -12,7 +12,7 @@ export const main = engine => {
       { x: 16, y: 9 }
     )
 
-    flock.push.apply(flock, populateFlock(50, engine, root))
+    flock.push.apply(flock, populateFlock(150, engine, root))
 
     engine.createCanvas(root.x, root.y)
   }

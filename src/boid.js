@@ -85,7 +85,7 @@ export class Boid extends Particle {
         boid.position.x,
         boid.position.y
       )
-      avg.add(p5.Vector.sub(this.position, boid.position).div(d ** 2 - d))
+      avg.add(p5.Vector.sub(this.position, boid.position).div(d ** 2 - 1))
     })
 
     if (this.neighbors.length) {
